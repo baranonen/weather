@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu</title>
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script src="scripts/main.js"></script>
+    <script src="https://kit.fontawesome.com/c857a23705.js"></script>
+</head>
+<body onload="getweather()">
+    <header>
+        <div class="segmentedcontrol">
+            <div id="chosen" class="chosen" style="left: 2px;"></div>
+            <a id="dailybtn" style="font-weight: 600; font-size: 13px;" onclick="daily()">Günlük</a>
+            <a id="weeklybtn" style="font-weight: 500; font-size: 13px;" onclick="weekly()">Haftalık</a>
+        </div>
+    </header>
+    <div class="maincontainer">
+        <div id="dailydiv" class="weatherdiv" style="display: flex;">
+            <div class="bigcontainer">
+                <i class="fas fa-cloud-sun bigicon"></i>
+                <div>
+                    <h1 class="todaytext">Bugün</h1>
+                    <h2 id="todaydate" class="todaysecondary">7 Eylül, Pazartesi</h2>
+                </div>
+            </div>
+            <h1 id="bigdegree" class="bigdegree">-º</h1>
+            <p id="secondarytext" class="secondarytext">Şehir</p>
+            <div class="todaycontainer">
+                <div class="firstcontainer">
+                    <i class="fas fa-temperature-high smallicon"></i>
+                    <div>
+                        <h1 id="maxtemp" class="detailbig">-º</h1>
+                        <h2 class="detailsmall">En yüksek s.</h2>
+                    </div>
+                </div>
+                <div class="firstcontainer">
+                    <i class="fas fa-temperature-low smallicon"></i>
+                    <div>
+                        <h1 id="mintemp" class="detailbig">-º</h1>
+                        <h2 class="detailsmall">En düşük s.</h2>
+                    </div>
+                </div>
+                <div class="firstcontainer">
+                    <i class="fas fa-location-arrow smallicon"></i>
+                    <div>
+                        <h1 id="winddirection" class="detailbig">-º</h1>
+                        <h2 class="detailsmall">Rüzgar yönü</h2>
+                    </div>
+                </div>
+                <div class="firstcontainer">
+                    <i class="fas fa-wind smallicon"></i>
+                    <div>
+                        <h1 id="windspeed" class="detailbig">- km/sa</h1>
+                        <h2 class="detailsmall">Rüzgar hızı</h2>
+                    </div>
+                </div>
+                <div class="firstcontainer">
+                    <i class="fas fa-sun smallicon"></i>
+                    <div>
+                        <h1 id="airpressure" class="detailbig">- hPa</h1>
+                        <h2 class="detailsmall">Hava basıncı</h2>
+                    </div>
+                </div>
+                <div class="firstcontainer">
+                    <i class="fas fa-tint smallicon"></i>
+                    <div>
+                        <h1 id="humidity" class="detailbig">-</h1>
+                        <h2 class="detailsmall">Görecelİ Nem</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="weeklydiv" class="weatherdiv" style="display: none;">
+            <div class="tablecell">
+                <h3 id="day0">Gün</h3>
+                <i class="fas fa-cloud-sun smallicon"></i>
+                <div>
+                    <p id="highest0" class="highest">18</p>
+                    <p id="lowest0" class="lowest">15</p>
+                </div>
+            </div>
+            <div class="tablecell">
+                <h3 id="day1">Gün</h3>
+                <i class="fas fa-cloud-sun smallicon"></i>
+                <div>
+                    <p id="highest1" class="highest">18</p>
+                    <p id="lowest1" class="lowest">15</p>
+                </div>
+            </div>
+            <div class="tablecell">
+                <h3 id="day2">Gün</h3>
+                <i class="fas fa-cloud-sun smallicon"></i>
+                <div>
+                    <p id="highest2" class="highest">18</p>
+                    <p id="lowest2" class="lowest">15</p>
+                </div>
+            </div>
+            <div class="tablecell">
+                <h3 id="day3">Gün</h3>
+                <i class="fas fa-cloud-sun smallicon"></i>
+                <div>
+                    <p id="highest3" class="highest">18</p>
+                    <p id="lowest3" class="lowest">15</p>
+                </div>
+            </div>
+            <div class="tablecell">
+                <h3 id="day4">Gün</h3>
+                <i class="fas fa-cloud-sun smallicon"></i>
+                <div>
+                    <p id="highest4" class="highest">18</p>
+                    <p id="lowest4" class="lowest">15</p>
+                </div>
+            </div>
+            <div class="tablecell">
+                <h3 id="day5">Gün</h3>
+                <i class="fas fa-cloud-sun smallicon"></i>
+                <div>
+                    <p id="highest5" class="highest">18</p>
+                    <p id="lowest5" class="lowest">15</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

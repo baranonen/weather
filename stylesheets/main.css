@@ -1,0 +1,255 @@
+:root {
+    --background-color: rgb(255, 255, 255);
+    --blue: rgb(0, 122, 255);
+    --gray: rgb(142, 142, 147);
+    --gray-2: rgb(174, 174, 178);
+    --gray-3: rgb(223, 223, 223);
+    --gray-4: rgb(231, 231, 232);
+    --gray-5: rgb(231, 231, 232);
+    --gray-6: rgb(247, 247, 247);
+    --gray-7: rgb(242, 242, 247);
+    --text-color: #000000;
+    --chosen-color: rgb(255, 255, 255);
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    */
+    user-select: none;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--background-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: var(--gray-6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: var(--gray-3) solid 1px;
+}
+
+.segmentedcontrol {
+    height: 25px;
+    background-color: var(--gray-5);
+    width: 145px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    padding: 3px;
+    position: relative;
+}
+
+.segmentedcontrol a {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    z-index: 10;
+}
+
+.segmentedcontrol .chosen {
+    background-color: var(--chosen-color);
+    width: 73px;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    height: 27px;
+    border-radius: 5px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.maincontainer {
+    padding-top: 70px;
+}
+
+.todaytext {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+
+.todaysecondary {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--gray);
+    margin-top: 3px;
+}
+
+.firstcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: baseline;
+    width: 120px;
+}
+
+.bigcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    width: fit-content;
+}
+
+.firstcontainer div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+}
+
+.bigicon {
+    font-size: 50px;
+    margin-right: 20px;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.weatherdiv {
+    width: calc(100% - 40px);
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .2s;
+}
+
+.bigdegree {
+    font-size: 70px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.secondarytext {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--gray);
+    margin-top: 0;
+}
+
+.todaycontainer {
+    padding: 20px;
+    padding-top: 0;
+    background-color: var(--gray-7);
+    width: fill-available;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+
+.detailbig {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.detailsmall {
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.smallicon {
+    font-size: 20px;
+    margin-right: 10px;
+    min-width: 20px;
+}
+
+.tablecell {
+    width: 100%;
+    border-bottom: var(--gray-4) 1px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tablecell div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 50px;
+}
+
+.tablecell h3 {
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.tablecell p {
+    margin-left: 5px;
+}
+
+.lowest {
+    color: var(--gray);
+}
+
+.highest {
+    color: var(--text-color);
+}
+
+.tablecell i {
+    color: var(--text-color);
+    position: absolute;
+    left: 50%;
+    right: 50%;
+}
+
+@media screen and (max-width:350px) {
+    .todaycontainer {
+        padding-left: 10px;
+        padding-right: 10px;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(0, 0, 0);
+        --gray: rgb(142, 142, 147);
+        --gray-2: rgb(99, 99, 102);
+        --gray-3: rgb(70, 70, 70);
+        --gray-4: rgb(58, 59, 60);
+        --gray-5: rgb(42, 42, 45);
+        --gray-6: rgb(28, 28, 30);
+        --gray-7: rgb(28, 28, 30);
+        --text-color: #ffffff;
+        --chosen-color: rgb(100, 100, 105);
+    }
+}  
